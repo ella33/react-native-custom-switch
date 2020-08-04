@@ -28,7 +28,7 @@ const wrapperStyle = {
   alignSelf: 'flex-start',
 };
 
-const CapRxSwitch = (props) => {
+const Switch = (props) => {
   const { lhsLabel, rhsLabel, value, onValueChange, color, full } = props;
   const [status, setStatus] = useState(value);
   const animatedPosition = useRef(new Animated.Value(status ? 0 : 1));
@@ -73,9 +73,9 @@ const CapRxSwitch = (props) => {
   )
 };
 
-CapRxSwitch.defaultProps = {
+Switch.defaultProps = {
   full: true,
   onValueChange: () => {},
 };
 
-export default CapRxSwitch;
+export default Switch;
